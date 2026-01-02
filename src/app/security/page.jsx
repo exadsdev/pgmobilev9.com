@@ -11,7 +11,7 @@ export default function SecurityPage() {
       <div className="container" style={{ maxWidth: 900 }}>
         <h1 className="mb-3">นโยบายความปลอดภัย</h1>
         <p>
-          <strong>มีผลตั้งแต่:</strong> ระบุวันที่เริ่มใช้
+          <strong>มีผลตั้งแต่:</strong> 1 ธันวาคม 2025
         </p>
 
         <h2 className="mt-4">มาตรการปกป้องข้อมูล</h2>
