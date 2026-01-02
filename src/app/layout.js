@@ -234,6 +234,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify(ldJsonWebPage)
           }}
         />
+          <meta name="google-site-verification" content="uBiYrDhegWZ1wXB4aJO_lTINP4hG9KvHuf9wvCcnwP0" />
       </head>
       <body>
         <CartProvider>
