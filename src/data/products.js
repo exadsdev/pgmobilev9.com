@@ -2,53 +2,53 @@ export const products = [
     {
         id: 'pg-v9-1',
         name: 'สมาร์ทโฟน PG V9 รุ่นที่ 1 จอ 6.3 นิ้ว ROM 64GB',
-        price: 1190,
+        price: 1990,
         image: '/images/pg-v9-1.jpg',
         badge: 'ยอดนิยม'
     },
     {
         id: 'pg-v9-2',
         name: 'สมาร์ทโฟน PG V9 รุ่นที่ 2 รองรับ 2 ซิม 4G',
-        price: 1190,
+        price: 1990,
         image: '/images/pg-v9-2.jpg',
         badge: 'ขายดี'
     },
     {
         id: 'pg-v9-3',
         name: 'สมาร์ทโฟน PG V9 รุ่นที่ 3 แบตอึด เล่นโซเชียลลื่น',
-        price: 1190,
+        price: 1990,
         image: '/images/pg-v9-3.jpg',
         badge: 'สุดคุ้ม'
     },
     {
         id: 'pg-v9-4',
         name: 'สมาร์ทโฟน PG V9 รุ่นที่ 4 กล้องคมชัด เหมาะถ่ายรูป',
-        price: 1190,
+        price: 1990,
         image: '/images/pg-v9-4.jpg',
         badge: 'โปรโมชั่น'
     },
     {
         id: 'pg-v9-5',
         name: 'สมาร์ทโฟน PG V9 รุ่นที่ 5 ดีไซน์บางเบา พกพาสะดวก',
-        price: 1190,
+        price: 1990,
         image: '/images/pg-v9-5.jpg'
     },
     {
         id: 'pg3',
         name: 'สมาร์ทโฟน PG V9 เน้นความคุ้ม RAM/ROM เพียงพอ',
-        price: 1190,
+        price: 1990,
         image: '/images/pg3.jpg'
     },
     {
         id: 'pg4',
         name: 'สมาร์ทโฟน PG V9 มือถือจอใหญ่ ดูคอนเทนต์เต็มตา',
-        price: 1190,
+        price: 1990,
         image: '/images/pg4.jpg'
     },
     {
         id: 'pg5',
         name: 'สมาร์ทโฟน PG V9 รองรับแอปยอดนิยมครบ เล่นไลน์เฟซสบาย',
-        price: 1190,
+        price: 1990,
         image: '/images/pg5.jpg'
     },
     {
@@ -66,7 +66,7 @@ export const products = [
     {
         id: 'pg-r2',
         name: 'โทรศัพท์ PG DROID R2 PLUS แบตเตอรี่ 3,400 Mah แรม4GB รอม 64GB ',
-        price: 1890,
+        price: 1990,
         image: '/images/pg-r2.jpg'
     }
 ];
