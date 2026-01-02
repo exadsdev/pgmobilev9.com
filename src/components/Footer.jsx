@@ -36,8 +36,7 @@ export default function Footer() {
             </p>
 
             <p className="small text-muted">
-              เรามุ่งเน้นการจำหน่ายสินค้าแท้ โปร่งใส ปลอดภัย  
-              เป็นมิตรกับผู้ใช้งาน และปฏิบัติตามนโยบายของ Google และแพลตฟอร์มโฆษณาต่าง ๆ  
+              
             </p>
           </div>
 
@@ -82,8 +81,7 @@ export default function Footer() {
             )}
 
             <p className="mt-2 small text-muted">
-              แผนที่นี้ช่วยยืนยันความน่าเชื่อถือของร้านค้า เพิ่มคะแนนคุณภาพให้ SEO  
-              และช่วยให้ Google Ads เห็นว่าเว็บไซต์มีข้อมูลธุรกิจที่ตรวจสอบได้จริง
+             
             </p>
           </div>
 
@@ -96,10 +94,7 @@ export default function Footer() {
             © {year} {companyLegal}. สงวนลิขสิทธิ์.
           </p>
 
-          <p className="small text-muted mb-0">
-            เว็บไซต์นี้พัฒนาโดยคำนึงถึง SEO, ความปลอดภัยข้อมูล  
-            และความสอดคล้องกับนโยบาย Google Ads อย่างเคร่งครัด
-          </p>
+          
         </div>
       </div>
     </footer>
