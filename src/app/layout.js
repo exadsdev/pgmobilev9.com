@@ -3,18 +3,19 @@ import './globals.css';
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Prompt } from 'next/font/google';
-
-const prompt = Prompt({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['thai', 'latin'],
-  display: 'swap',
-});
+import Script from 'next/script';
 
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import { CartProvider } from '@/components/CartContext';
 import GoogleAdsTag from '@/components/GoogleAdsTag';
+
+const prompt = Prompt({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['thai', 'latin'],
+  display: 'swap',
+});
 
 // ตั้งค่า URL หลัก
 const rawSiteUrl =
@@ -34,14 +35,13 @@ const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || '';
 // แบรนด์ / นิติบุคคล
 const brandName = 'pg mobile';
 const companyLegal =
-  process.env.NEXT_PUBLIC_COMPANY_LEGAL ||
-  'PG MOBILE LIMITED PARTNERSHIP';
+  process.env.NEXT_PUBLIC_COMPANY_LEGAL || 'PG MOBILE LIMITED PARTNERSHIP';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: 'pg mobile | แหล่งรวมมือถือคุณภาพ ประกันศูนย์ไทย',
-    template: '%s | pg mobile'
+    template: '%s | pg mobile',
   },
   applicationName: 'pg mobile',
   description:
@@ -53,15 +53,13 @@ export const metadata = {
     'pg',
     'โทรศัพท์มือถือ',
     'สมาร์ทโฟนราคาถูก',
-    'มือถือประกันศูนย์'
+    'มือถือประกันศูนย์',
   ],
-  alternates: {
-    canonical: siteUrl
-  },
+  alternates: { canonical: siteUrl },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/images/logo.png'
+    apple: '/images/logo.png',
   },
   openGraph: {
     title: 'pg mobile | มือถือคุณภาพ ราคาคุ้มค่า',
@@ -74,17 +72,17 @@ export const metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: 'สินค้าแนะนำจาก pg mobile'
-      }
+        alt: 'สินค้าแนะนำจาก pg mobile',
+      },
     ],
     locale: 'th_TH',
-    type: 'website'
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'pg mobile',
     description: 'ศูนย์รวมมือถือ PG Mobile V9 ราคาคุ้มค่า',
-    images: [ogImage]
+    images: [ogImage],
   },
   robots: {
     index: true,
@@ -95,9 +93,9 @@ export const metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  }
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -110,17 +108,15 @@ export default function RootLayout({ children }) {
     alternateName: ['PG Mobile V9', 'PG Mobile Official', 'pgmobile'],
     url: siteUrl,
     inLanguage: 'th-TH',
-    publisher: {
-      '@id': `${siteUrl}#organization`
-    },
+    publisher: { '@id': `${siteUrl}#organization` },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${siteUrl}/search?q={search_term_string}`
+        urlTemplate: `${siteUrl}/search?q={search_term_string}`,
       },
-      'query-input': 'required name=search_term_string'
-    }
+      'query-input': 'required name=search_term_string',
+    },
   };
 
   // Organization
@@ -135,34 +131,34 @@ export default function RootLayout({ children }) {
       '@type': 'ImageObject',
       url: logoImage,
       width: 112,
-      height: 112
+      height: 112,
     },
     contactPoint: [
       ...(contactPhone
         ? [
-          {
-            '@type': 'ContactPoint',
-            telephone: contactPhone,
-            contactType: 'customer service',
-            areaServed: 'TH',
-            availableLanguage: 'Thai'
-          }
-        ]
+            {
+              '@type': 'ContactPoint',
+              telephone: contactPhone,
+              contactType: 'customer service',
+              areaServed: 'TH',
+              availableLanguage: 'Thai',
+            },
+          ]
         : []),
       ...(contactEmail
         ? [
-          {
-            '@type': 'ContactPoint',
-            email: contactEmail,
-            contactType: 'customer service'
-          }
-        ]
-        : [])
+            {
+              '@type': 'ContactPoint',
+              email: contactEmail,
+              contactType: 'customer service',
+            },
+          ]
+        : []),
     ],
     sameAs: [
       // ใส่ลิงก์ Facebook / Line OA ถ้ามี
       // 'https://www.facebook.com/pgmobile',
-    ]
+    ],
   };
 
   // Breadcrumb โครงเว็บหลัก
@@ -170,19 +166,9 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'หน้าหลัก',
-        item: siteUrl
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'สินค้า',
-        item: `${siteUrl}/products`
-      }
-    ]
+      { '@type': 'ListItem', position: 1, name: 'หน้าหลัก', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'สินค้า', item: `${siteUrl}/products` },
+    ],
   };
 
   // WebPage สำหรับหน้าแรก
@@ -193,49 +179,38 @@ export default function RootLayout({ children }) {
     url: siteUrl,
     name: 'pg mobile | แหล่งรวมมือถือคุณภาพ ประกันศูนย์ไทย',
     inLanguage: 'th-TH',
-    isPartOf: {
-      '@id': `${siteUrl}#website`
-    },
-    about: {
-      '@id': `${siteUrl}#organization`
-    }
+    isPartOf: { '@id': `${siteUrl}#website` },
+    about: { '@id': `${siteUrl}#organization` },
   };
 
   return (
-    <html lang="th" className={prompt.className}>
+    <html lang="th" className={prompt.className} suppressHydrationWarning>
       <head>
-        <link
-          rel="shortcut icon"
-          href="/favicon.ico"
-          type="image/x-icon"
-        />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(ldJsonWebsite)
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJsonWebsite) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(ldJsonOrganization)
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJsonOrganization) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(ldJsonBreadcrumb)
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJsonBreadcrumb) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(ldJsonWebPage)
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJsonWebPage) }}
         />
-          <meta name="google-site-verification" content="uBiYrDhegWZ1wXB4aJO_lTINP4hG9KvHuf9wvCcnwP0" />
+
+        <meta
+          name="google-site-verification"
+          content="uBiYrDhegWZ1wXB4aJO_lTINP4hG9KvHuf9wvCcnwP0"
+        />
       </head>
+
       <body>
         <CartProvider>
           <GoogleAdsTag />
@@ -244,8 +219,14 @@ export default function RootLayout({ children }) {
           <Footer />
           <CookieConsent />
         </CartProvider>
+
+        {/* ✅ โหลด bootstrap bundle อย่างถูกต้อง (อยู่ใน body และควบคุมด้วย Next.js) */}
+        <Script
+          id="bootstrap-bundle"
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          strategy="afterInteractive"
+        />
       </body>
-             <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"   /> 
     </html>
   );
 }
